@@ -11,20 +11,24 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
 		crossorigin="anonymous"></script>
+
 </head>
 
 <body>
-	<nav class="nav mb-4 d-none d-md-block navbar-expand navbar-light w-100 me-auto" style="background-color: #3c312e">
-		<div class="container">
+	<nav class="nav mb-4 d-none d-md-block navbar-expand w-100 mx-sm-auto" style="background-color: #3c312e;">
+		<div class=" container">
 			<div class="row">
-				<ul class="navbar-nav ms-auto">
+				<ul class="navbar-nav ms-auto border-bottom border-dark">
 					<li class="nav-item">
-						<a class="mx-4" href="home.php">
+						<a class="mx-sm-3" href="index.php">Anhas Furniture</a>
+					</li>
+					<li class="nav-item">
+						<a class="mx-sm-3" href="home.php">
 							home
 						</a>
 					</li>
 					<li class="nav-item">
-						<a class="mx-4" href="kriteria.php">
+						<a class="mx-sm-4" href="kriteria.php">
 							Kriteria
 							<div class="ui blue tiny label ms-1" style="float: right;">
 								<?php echo getJumlahKriteria(); ?>
@@ -32,7 +36,7 @@
 						</a>
 					</li>
 					<li class="nav-item">
-						<a class="mx-4" href="alternatif.php">
+						<a class="mx-sm-3" href="alternatif.php">
 							Alternatif
 							<div class="ui blue tiny label ms-1" style="float: right;">
 								<?php echo getJumlahAlternatif(); ?>
@@ -40,40 +44,43 @@
 						</a>
 					</li>
 					<li class="nav-item">
-						<a class="mx-4" href="bobot_kriteria.php">
+						<a class="mx-sm-3" href="bobot_kriteria.php">
 							Perbandingan Kriteria
 						</a>
 					</li>
 					<li class="nav-item">
-						<a class="mx-4" href="bobot.php?c=1">
+						<a class="mx-sm-3" href="bobot.php?c=1">
 							Perbandingan Alternatif
 						</a>
 					</li>
-					<ul>
-						<?php
 
-						if (getJumlahKriteria() > 0) {
-							for ($i = 0; $i <= (getJumlahKriteria() - 1); $i++) {
-								echo "<li><a class='item' href='bobot.php?c=" . ($i + 1) . "'>" . getKriteriaNama($i) . "</a></li>";
-							}
-						}
-
-						?>
-					</ul>
 					<li class="nav-item">
-						<a class="mx-4" href="hasil.php">
+						<a class="mx-sm-3" href="hasil.php">
 							Hasil
 						</a>
 					</li>
-					<li class="nav-item bg-danger offset-2">
+					<li class="nav-item bg-danger offset-1">
 						<a href="logout.php">
 							Logout
 						</a>
 					</li>
 				</ul>
+				<ul class="text-center mt-3">
+					<?php
+
+					if (getJumlahKriteria() > 0) {
+						for ($i = 0; $i <= (getJumlahKriteria() - 1); $i++) {
+							echo "<li><a class='item' href='bobot.php?c=" . ($i + 1) . "'>" . getKriteriaNama($i) . "</a></li>";
+						}
+					}
+
+					?>
+				</ul>
 			</div>
 		</div>
 	</nav>
+
+
 	<header>
-		<h1 class="text-center my-5" style="color: black;">Sistem Pendukung Keputusan dengan metode AHP</h1>
+		<h1 class="text-center my-5" style="color: black;">Sistem Pendukung Keputusan Kelompok 5 AHP</h1>
 	</header>

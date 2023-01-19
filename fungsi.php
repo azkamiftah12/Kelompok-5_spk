@@ -468,9 +468,22 @@ function showTabelPerbandingan($jenis, $kriteria)
 									} else {
 										$nilai = getNilaiPerbandinganAlternatif($x, $y, ($jenis - 1));
 									}
-									//revisi pake combo box atau dikasih kondisi
 									?>
-									<input type="text" name="bobot<?php echo $urut ?>" value="<?php echo $nilai ?>" required>
+									<select name="bobot<?php echo $urut ?>" id="">
+										<option value="<?php echo $nilai ?>">
+											Pilih Bobot Penilaian (Recently <?php echo $nilai ?>)
+										</option>
+										<option value="0.111">Mutlak Lebih Tidak Penting</option>
+										<option value="0.143">Sangat Lebih Tidak Penting</option>
+										<option value="0.2">Lebih tidak Penting</option>
+										<option value="0.333">Cukup Tidak Penting</option>
+										<option value="1">Sama Penting</option>
+										<option value="3">Cukup Penting</option>
+										<option value="5">Lebih Penting</option>
+										<option value="7">Sangat Lebih Penting</option>
+										<option value="9">Mutlak Lebih Penting</option>
+									</select>
+
 								</div>
 							</td>
 						</tr>

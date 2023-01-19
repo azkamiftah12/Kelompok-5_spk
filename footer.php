@@ -1,7 +1,7 @@
 </div> <!-- /wrapper -->
 
 <footer>
-	<p>Copyright &copy; <?php echo date("Y"); ?></p>
+	<p>Copyright Kelompok 5 SPK CCIT-5 &copy; <?php echo date("Y"); ?></p>
 </footer>
 
 <script src="js/jquery-3.2.1.js"></script>
@@ -9,17 +9,18 @@
 <script type="text/javascript">
 	$('.ui.radio.checkbox')
 		.checkbox()
-	;
+		;
 </script>
 <script type="text/javascript">
 	$('.message .close')
-	  .on('click', function() {
-	    $(this)
-	      .closest('.message')
-	      .transition('fade')
-	    ;
-	  })
-	;
+		.on('click', function () {
+			$(this)
+				.closest('.message')
+				.transition('fade')
+				;
+		})
+		;
 </script>
 </body>
+
 </html>
